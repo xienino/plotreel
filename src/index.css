@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 14pt;
+  line-height: 130%;
+  color: white;
+  background-color: white;
+}
+textarea {
+  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 14pt;
+  padding: 0.6rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Roboto Condensed', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+    'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+  /* background: rgba(0,0,0,0.2); */
+  background: #373737;
+  border-radius: 10px;
+}
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  touch-action: none;
+  height: 100%;
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei';
+  position: relative;
+  width: 100%;
+}
+
+#app {
+  height: 100%;
+  width: 100%;
+  overflow-y: hidden;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex1 {
+  flex: 1;
+}
+
+.flex-column-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.flex-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.flex-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
