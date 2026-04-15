@@ -1,0 +1,303 @@
+.baseInfoWrap
+  box-sizing: border-box
+  height: 100%
+  width: 100%
+.detailBaseInfo
+  display: flex
+  height: 100%
+.detailLeft
+  flex-shrink: 0
+  align-self: flex-start
+  height: 100%
+  padding: 25px
+.detailRowTitle
+  font-size: 14px
+  padding-top: 20px
+  padding-bottom: 10px
+  padding-right: 8px
+
+.asterikIcon
+  font-size: 20px
+  position: relative
+  top: 7px
+  padding-right: 8px
+  color: rgba(255,255,255,0.55)
+
+        
+.paintingStyleItem
+  position: relative
+  width: 120px
+  height: 67px
+  margin-right: 16px
+  margin-bottom: 16px
+  .ant-radio
+    z-index: 1
+    position: absolute
+    top: 5px
+    left: 5px
+  img
+    width: 120px
+    height: 67px
+    position: absolute
+    left: 0
+    top: 0
+    object-fit: cover
+    object-position: right 35%
+    border-radius: 8px
+  .paintingStyleLabel
+    z-index: 10
+    color: white
+    position: absolute
+    bottom: 0
+    width: 120px
+    height: 20px
+    line-height: 20px
+    border-radius: 0px 0px 8px 8px
+    background-color: rgba(178,181,195,0.7)
+    left: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    font-weight: bold
+
+.projectName
+  border: null
+  font-size: 14px
+  height: 33px
+  font-weight: 500px
+  font-family: inherit
+  width: 266px
+  margin-right: 60px
+
+.detailRight
+  width: 500px
+  height: 100%
+  border-left: 1px solid rgba(178,181,195,0.4)
+  padding: 25px
+  box-sizing: border-box
+  line-height: 30px
+  .uploadSegment
+    width: 100%
+    border-radius: 20px
+    .ant-segmented-item, .ant-segmented.ant-segmented-lg
+      border-radius: 20px!important
+    .ant-segmented-item
+      height: 42px
+    .ant-segmented-item-label
+      height: 42px 
+      line-height: 42px!important
+      border: 1px solid transparent
+    .ant-segmented-item-selected .ant-segmented-item-label, .ant-segmented-thumb
+      border-radius: 20px!important
+      border: 1px solid rgba(178,181,195,1)
+      background: linear-gradient(86.74deg, rgba(114,86,228,1) -5.38%,rgba(114,86,86,0) 91.24%)
+      height: 42px 
+      line-height: 42px
+  .uploadContent
+    margin-top: 10px
+    margin-bottom: 70px
+    height: 100%
+    width: 100%
+
+
+// .ant-segmented-thumb
+//   border: 1px solid #7256E4
+// .ant-segmented-item
+//   border: 1px solid transparent
+// .ant-segmented-item-selected
+//   border: 1px solid #7256E4
+
+.uploadedContent
+  text-align: center
+  background: rgba(255, 255, 255, 0.04)
+  border: 1px dashed #424242
+  border-radius: 8px
+  transition: border-color 0.3s
+  height: 100%
+  display: flex
+  justify-content: center
+  font-size: 14px
+  padding: 20px
+.uploadedItem
+  height: 66px
+  width: 100%
+  border-radius: 4px
+  border: 1px solid rgba(178,181,195,0.4)
+  display: flex
+  align-items: center
+  padding: 15px
+  box-sizing: border-box
+  .wordIcon
+    margin-right: 10px
+    font-size: 35px
+    color: #54a0ff
+  .wordDelete
+    flex: 1
+    justify-content: flex-end
+    cursor: pointer
+
+.segmentContentWrap
+  border-radius: 21px
+  border: 1px solid rgba(178,181,195,0.4)
+  width: 100%
+  height: 235px
+  box-sizing: border-box
+  overflow: hidden
+  margin-top: 20px
+  padding-bottom: 40px
+  position: relative
+.totalWorld
+  position: absolute
+  right: 15px
+  bottom: 14px
+  font-size: 14px
+  color: rgb(102, 102, 102)
+.segmentContent
+  width: calc(100% - 20px)
+  height: calc(100% - 20px)
+  overflow: auto
+  margin: 10px 0 10px 20px
+  color: rgba(102,102,102,1)
+  font-size: 14px
+
+.segmentItem
+  display: flex
+  align-items: center
+  .ant-input-suffix
+    visibility: hidden
+  &:hover
+    background: #ebebff14
+    .ant-input-suffix
+      visibility: visible
+  .ant-input-show-count-suffix
+    color: rgb(102, 102, 102)
+.segmentInput
+  font-size: 14px
+
+.labelTitle
+  color: rgba(255,255,255,1)
+  font-size: 14px
+.labelTip
+  color: rgba(178,181,195,1)
+  font-size: 12px
+
+.labelList
+  width: 468px
+  display: flex
+  flex-wrap: wrap
+  padding-bottom: 15px
+.labelCard
+  width: 103px
+  height: 124px
+  line-height: 20px
+  border-radius: 8px
+  background: linear-gradient(91.56deg, rgba(36,38,46,1) -0.63%,rgba(114,86,86,0) 110.33%)
+  font-size: 14px
+  text-align: center
+  display: flex
+  align-items: center
+  justify-content: center
+  margin-right: 14px
+  color: white
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+    border-radius: 8px
+.addLabelCard
+  width: 103px
+  height: 124px
+  line-height: 20px
+  border-radius: 8px
+  background-color: rgba(36,38,46,1)
+  color: white
+  font-size: 14px
+  text-align: center
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  cursor: pointer
+  margin-right: 14px
+  flex-shrink: 0
+  // &:hover
+  //   background: #323540
+  .plusIcon
+    font-size: 24px
+    margin-bottom: 10px
+
+.generateRecordsItem
+  width: 80px
+  height: 100px
+  border-radius: 8px
+  background-color: rgba(229,229,229,1)
+  margin-right: 14px
+  cursor: pointer
+.generateRecordsItemLoading
+  text-align: center
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  width: 80px
+  height: 100px
+  border-radius: 8px
+  background: linear-gradient(91.56deg, #56565c -0.63%,rgba(114,86,86,0) 110.33%)
+  color: white
+  margin-right: 14px
+  cursor: pointer
+
+.addLabelContent
+  display: flex
+  height: 600px
+  border-bottom: 1px solid rgba(178,181,195,0.4)
+.addLabelLeft
+  width: 179px
+  flex-shrink: 0
+  border-right: 1px solid rgba(178,181,195,0.4)
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding: 35px 10px 0 10px
+.addLabelRight
+  flex: 1
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding: 15px 25px 0 25px
+.addLabelImg
+  width: 115px
+  height: 149px
+  border-radius: 4px
+  background-color: #121212
+  margin-top: 16px
+.addLabelInputContent
+  padding-top: 20px
+  width: 100%
+  background: #121212
+  padding: 17px
+  box-sizing: border-box
+  margin-top: 20px
+  border-radius: 4px
+  border: 1px solid #121212
+  textarea:focus
+    box-shadow: none
+.addLabelRecordsContent
+  display: flex
+  flex-direction: column
+  width: 100%
+  .recordsTitle
+    padding-top: 25px
+    padding-bottom: 12px
+.addLabelRecordsList
+  display: flex
+.addLabelFoolter
+  display: flex
+  align-items: center
+  justify-content: center
+
+.addLabelImgSrc
+  width: 115px
+  height: 149px
+  border-radius: 4px
+  background: #121212
