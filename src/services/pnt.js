@@ -143,8 +143,15 @@ export async function fileUpload(data) {
 }
 
 export async function upgradeLast(data) {
-  // 更新-获取安装包
-  return window.axiosInstance.post('/upgrade/last', data, { baseURL }).catch((error) => {
+  try {
+    window.axiosInstance.post('/upgrade/last', data, { baseURL }).then((res) => {
+      console.log('✨upgradeLast res', res)
+    })
+  } catch (error) {
     message.error(`Error posting user data: ${error}`)
-  })
+  }
+  // 更新-获取安装包
+  // return window.axiosInstance.post('/upgrade/last', data, { baseURL }).catch((error) => {
+  //   message.error(`Error posting user data: ${error}`)
+  // })
 }

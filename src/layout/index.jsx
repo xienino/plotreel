@@ -100,6 +100,16 @@ export const themeConfig = {
   algorithm: [theme.darkAlgorithm, theme.compactAlgorithm],
 }
 const globalToken = theme.getDesignToken(themeConfig)
+let initialGetMtkPromise = null
+
+const getInitialMtk = () => {
+  if (!initialGetMtkPromise) {
+    initialGetMtkPromise = api.getMtk({}).finally(() => {
+      initialGetMtkPromise = null
+    })
+  }
+  return initialGetMtkPromise
+}
 
 const MyLayout = ({
   loraList,
@@ -208,6 +218,8 @@ const MyLayout = ({
   // 添加响应拦截
   instance.interceptors.response.use(
     (response) => {
+      console.log('添加响应拦截 response', response)
+      // debugger
       const msg = response?.data?.resMsg[0]
       if (response?.data?.resCode === LOGOUT_CODE || msg?.msgCode === MSG_CODE.LOGIN_EXPIRE) {
         navigate('/login')
@@ -274,6 +286,8 @@ const MyLayout = ({
 
   const upgradeLast = async () => {
     const res = await api.upgradeLast()
+    // debugger
+    console.log('upgradeLast res', res)
     const { remark, upgradeType } = res?.data?.resData || {}
     if (!version) return
     setVersion(res?.data?.resData?.version)
@@ -394,8 +408,13 @@ const MyLayout = ({
   }
 
   useEffect(() => {
+    let isActive = true
+
     upgradeLast()
-    api.getMtk({}).then((res) => {
+    getInitialMtk().then((res) => {
+      if (!isActive) return
+      console.log('😂 res', res)
+
       if (res?.data?.resData?.account && res?.data?.resData?.password) {
         sessionStorage.setItem('account', res?.data?.resData?.account)
         sessionStorage.setItem('password', res?.data?.resData?.password)
@@ -408,6 +427,10 @@ const MyLayout = ({
         setCurrentMtk(res?.data?.resData?.mtk)
       }
     })
+
+    return () => {
+      isActive = false
+    }
   }, [])
   useEffect(() => {
     if (mtk) {
