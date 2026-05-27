@@ -53,16 +53,11 @@ const Index = () => {
       message.error('两次密码输入不一致')
       return
     }
-    if (!uuid) {
-      message.error('验证码错误')
-      return
-    }
     setLoginLoading(true)
     if (isFindPassword) {
       const res = await api.resetPwd({
         mobileNo: phoneValue,
         verifyCode: verificationCode,
-        uuid,
         pwd: password,
         sysId: 'pnt',
         flagSrc: '0',
@@ -281,7 +276,7 @@ const Index = () => {
                   </Col>
                 </Row>
                 <Tabs
-                  defaultActiveKey="1"
+                  defaultActiveKey="2"
                   style={{
                     userSelect: 'none',
                     WebkitUserSelect: 'none',
